@@ -343,6 +343,34 @@ nav {
   color: #fff;
 }
 
+.slider-container {
+  position: relative;
+  display: inline-block;
+  width: 60%;
+  padding: 0 60px; /* Add horizontal padding */
+  margin-left: 310px;
+}
+
+.slider-button {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  background-color: rgba(41, 56, 118, 0.5);
+  color: white;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.prev {
+  left: 0; /* Adjust the position */
+}
+
+.next {
+  right: 0; /* Adjust the position */
+}
+
 /* FOOTER */
 
 footer {
@@ -458,3 +486,4 @@ footer {
     margin: 12px 0;
   }
 }
+
