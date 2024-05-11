@@ -54,6 +54,7 @@
               <a
                 href="https://www.linkedin.com/in/soumy-prajapati-015593207/"
                 class="about-me__link"
+                target="_blank"
               >
                 LinkedIn
               </a>
@@ -215,6 +216,133 @@
                 </div>
               </div>
             </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/cyberbullying.png"
+                  class="project__img"
+                  alt="Car subscription project"
+                />
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Bullying Predictor Flask App
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    NLP, BERT, LSTM, LIME, Pickle, Flask
+                  </h4>
+                  <p class="project__description--para">
+                    Engineered a Flask web application that utilizes a machine
+                    learning model to predict potential bullying in tweets. The
+                    model, trained using Natural Language Processing (NLP)
+                    techniques, analyzes text input and makes predictions across
+                    five categories:
+                  </p>
+                  <ul class="project__description--para">
+                    <li>1. Age</li>
+                    <li>2. Gender</li>
+                    <li>3. Religion</li>
+                    <li>4. Ethnicity</li>
+                    <li>5. Not cyberbullying</li>
+                  </ul>
+                  <p class="project__description--para">
+                    The model was serialized into a pickle file for efficient
+                    integration and reuse within the Flask application. The
+                    application, deployed on localhost, accepts tweet inputs
+                    from users and returns the prediction results, providing a
+                    user-friendly interface for real-time bullying detection.
+                  </p>
+
+                  <div class="project__description--links">
+                    <a href="/" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/summit.png"
+                  class="project__img"
+                  alt="Car subscription project"
+                />
+                <div class="project__description">
+                  <h3 class="project__description--title">ViewSummit</h3>
+                  <h4 class="project__description--sub-title">
+                    OPENAI API, Html, CSS, JavaScript, Bootstrap, React, ChartJS
+                  </h4>
+                  <p class="project__description--para">
+                    This is an interactive web application built with Bootstrap,
+                    React, and Charts.js. It visualizes a dataset of
+                    top-performing brokers over two years with various filters
+                    for user customization. An AI chatbot, powered by OpenAI, is
+                    integrated to answer queries about the dataset and charts.
+                    This application provides a unique, engaging, and
+                    user-friendly experience for data exploration.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="/" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+            </div>
+            <br><br><br><br><br>
+            <div class="slider-container">
+              <li class="project">
+                <div class="project__wrapper">
+                  <div class="slider-wrapper">
+                    <div class="image-slider" id="imageSlider">
+                      <img
+                        src="./assets/summit.png"
+                        class="project__img"
+                        alt="First project image"
+                      />
+                      <img
+                        src="./assets/chatbot.png"
+                        class="project__img"
+                        alt="Second project image"
+                      /><img
+                      src="./assets/mixed.png"
+                      class="project__img"
+                      alt="Second project image"
+                    /><img
+                    src="./assets/summary.png"
+                    class="project__img"
+                    alt="Second project image"
+                  />
+                    </div>
+                  </div>
+                    <div class="project__description">
+                      <h3 class="project__description--title">ViewSummit</h3>
+                      <h4 class="project__description--sub-title">
+                        OPENAI API, Html, CSS, JavaScript, Bootstrap, React, ChartJS
+                      </h4>
+                      <p class="project__description--para">
+                        This is an interactive web application built with Bootstrap,
+                        React, and Charts.js. It visualizes a dataset of
+                        top-performing brokers over two years with various filters
+                        for user customization. An AI chatbot, powered by OpenAI, is
+                        integrated to answer queries about the dataset and charts.
+                        This application provides a unique, engaging, and
+                        user-friendly experience for data exploration.
+                      </p>
+                      <div class="project__description--links">
+                        <a href="/" class="project__description--link">
+                          <i class="fas fa-link"></i>
+                        </a>
+                      </div>
+                </div>
+              </li>
+              <button class="slider-button prev" onclick="changeImage(-1)"> < </button>
+              <button class="slider-button next" onclick="changeImage(1)">
+                >
+              </button>
+            </div>
           </ul>
         </div>
       </div>
@@ -248,5 +376,31 @@
         </div>
       </div>
     </footer>
+    <script>
+      var slideIndex = 0;
+      showImage(slideIndex);
+
+      function changeImage(n) {
+        showImage((slideIndex += n));
+      }
+
+      function showImage(n) {
+        var i;
+        var slides = document
+          .getElementById("imageSlider")
+          .getElementsByTagName("img");
+        if (n >= slides.length) {
+          slideIndex = 0;
+        }
+        if (n < 0) {
+          slideIndex = slides.length - 1;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+      }
+    </script>
   </body>
 </html>
+
