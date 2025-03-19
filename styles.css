@@ -343,12 +343,12 @@ nav {
   color: #fff;
 }
 
-.slider-container {
+/* .slider-container {
   position: relative;
-  display: inline-block;
+  display: flex;
   width: 60%;
   padding: 0 60px; /* Add horizontal padding */
-  margin-left: 310px;
+/* margin-left: 310px;
 }
 
 .slider-button {
@@ -361,7 +361,7 @@ nav {
   padding: 20px;
   cursor: pointer;
   border-radius: 100%;
-}
+} */
 
 .prev {
   left: 0; /* Adjust the position */
@@ -448,6 +448,14 @@ footer {
     left: 30px;
     padding-right: 30px;
   }
+  .slider-container {
+    width: 90%;
+    padding: 0;
+  }
+
+  .slider-button {
+    padding: 8px;
+  }
 }
 
 /* SMALL PHONES */
@@ -485,5 +493,62 @@ footer {
     text-align: center;
     margin: 12px 0;
   }
+  .slider-container {
+    width: 100%;
+  }
+
+  .slider-button {
+    padding: 5px;
+  }
 }
 
+.slider-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center; /* Aligns buttons vertically */
+  justify-content: center; /* Centers the slider */
+}
+
+.slider-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.image-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.image-slider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(41, 56, 118, 0.7);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Move buttons outside the image */
+.prev {
+  left: -50px; /* Adjusts button placement to the left */
+}
+
+.next {
+  right: -50px; /* Adjusts button placement to the right */
+}
